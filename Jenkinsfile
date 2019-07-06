@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'yum update -y'
+        sh ' sudo yum update -y'
       }
     }
     stage('Test') {
       steps {
-        sh 'yum innstall httpd -y '
+        sh 'sudo yum innstall httpd -y '
       }
     }
     stage('Deploy') {
       steps {
-        sh 'mkdir /var/www/html/tc'
+        sh 'sudo mkdir /var/www/html/tc'
       }
     }
     stage('report') {

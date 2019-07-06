@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean'
+        sh 'yum update -y'
       }
     }
     stage('Test') {
       steps {
-        sh 'mvn test'
+        sh 'yum innstall httpd -y '
       }
     }
     stage('Deploy') {
       steps {
-        sh 'mvn package'
+        sh 'mkdir /var/www/html/tc'
       }
     }
     stage('report') {
